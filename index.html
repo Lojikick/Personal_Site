@@ -7,36 +7,151 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Portfolio | Avik Samanta</title>
+    <script src="https://kit.fontawesome.com/3932f20917.js" crossorigin="anonymous"></script>
 </head>
 
 
 <body>
 <div id="header">
-    <div id="container">
+    <div class="container">
         <nav>
             <!-- link for logo, you will replace with your own-->
-            <img src="images/logo.png" class="logo">
+            <h1>Avik Samanta</h1>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
 
+                <!-- https://docs.google.com/presentation/d/1AsdUJ60gbWkJeIgOzj5S01GyPng6Oc2ciDfecLgdRyM/edit?usp=sharing -->
                 <!-- li - will be a link tag -->
                 <!-- a makes it a clickable link -->
             </ul>
         </nav>
+        <div class="header-text">
+            <p>Develop. Discover. </p>
+            <h1>My name is <span>Avik </span><br/>Samanta</h1>
+        </div>
     </div>
 </div>
-<section class="intro" id="intro">
+
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class = "about-col-1">
+                <img src="images/avik.jpg">
+            </div>
+            <div class = "about-col-2">
+                <h1 class="subs">About me</h1>
+                <p>What's up! I'm Avik. I'm a undergraduate student studying at UC Berkeley. I enjoy building full-stack apps and websites, and engaging with Cognitive Science research. I use data driven tools and machine learning to drive insights between brain waives, brain patterns, and human emotion. I am currently working on research for Berkeley's Center of Human Sleep Science and Devcom's US Army Research Laboratory. </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links "  onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links "  onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                        <li><span>Web Development</span><br>Web app Development</li>
+                        <li><span>App Development</span><br>Building Full stack apps</li>
+                        <li><span>Data Science</span><br>Building Statistical Models</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2023-Current</span><br>Undergraduate Research Assistant at The Center of Human Sleep Science</li>
+                        <li><span>2023-Current</span><br>Undergraduate Research Assistant at RASCL - Relationships and Social Cognition Lab</li>
+                        <li><span>2023-2024</span><br>Undergraduate Research Assistant at DEVCOM Army Research Laboratory</li>
+                        <li><span>2022-Current</span><br>Software Developer at UCB Law IS&T Software Development</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2021-2025: Currently pursuing</span><br>University of California: Berkeley - BA Cognitive Science and Data Science, Minor in Computer Science </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--- Research --->
+
+<div id="research">
+    <div class="container">
+        <div class="row">
+            <div class="research-col1">
+                <img src="images/research_sample.png">
+            </div>
+            <div class="research-col2">
+                <h1 class="subs">Research Projects</h2>
+                <p class="none">I am currently pursuing undergraduate research in areas related to Cognitive Science, including behvioral psychology, emotional arousal, and sleep science. I work as a lab assistant for RASCL (Relationship and Social Cognition Lab) and CHSS (Center for Human Sleep Science), where I use data driven tools to gain insights from EEG data. Below is a link to my research portfolio:</p>
+                <a href="https://docs.google.com/presentation/d/1AsdUJ60gbWkJeIgOzj5S01GyPng6Oc2ciDfecLgdRyM/edit?usp=sharing" class="btn">Explore Research!</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--- Portfolio --->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">Developer Portfolio</h1>
+        <h2>A collection of my various software development projects!</h2>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/recap_logo.png" width="500" height="500">
+                <div class="layer">
+                    <h3>Recap: Class Search App</h3>
+                    <p>An app that helps you search for your next semester classes! Input your course code and school to get the overall difficulty and sentiment towards a class based on what others students' feelings towards the class. Features a backend that performs logistic regression on comments from a reddit database to determine the sentiment of a student's comment. Built with Python, Flask, and HTML/CSS</p>
+                    <a href="https://recap-cigr.onrender.com"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/bill_app.png" width="500" height="500">
+                <div class="layer">
+                    <h3>Billing Calculator App</h3>
+                    <p>An app that helps you split the bill at resturants! Takes the total bill, splits the cost based on the what the individual person payed, and takes into account tax and tip. Built with Javascript, and HTML/CSS</p>
+                    <a href="https://lojikick.github.io/billing-calculator/billcalc_index.html"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/calendar_app.png" width="500" height="500">
+                <div class="layer">
+                    <h3>Event Calendar App</h3>
+                    <p>An calendar app that helps you plan events across the year. Features functionality to post and delete events on days across the current year. Built with Javascript, and HTML/CSS</p>
+                    <a href="https://lojikick.github.io/event_calendar/"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+<!-- <section class="intro" id="intro">
     <div class="content">
         <h2>Hi There,<br/> I'm Avik <span> Samantaaaa</span></h2>
     </div>
-    <!-- <div class="image">
+     <div class="image">
         <img draggable="false" class="tilt" src="avik_beach_circle.png" alt="">
-    </div> -->
-</section>
+    </div> 
+</section> -->
 </body>
 
 </html>

@@ -8,7 +8,7 @@
     text-decoration: none;
     outline: none;
     border: none;
-    text-transform: capitalize;
+    
     transition: all 0.2s linear;
   }
 
@@ -26,14 +26,253 @@ body {
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url(images/background.png);
+    background: linear-gradient(rgba(0,0,0,0.1),#000000), url(images/AI_Background.jpg);
     background-size: cover;
     background-position: center;
 }
 
+
 .container {
-    padding
+    padding: 10px 10%;
 }
+
+
+.container h3{
+    font-weight: 20;
+}
+
+nav{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+}
+
+.logo{
+    width: 140px;
+}
+
+nav h1{
+    /* below makes the links side by side, inline block */
+    font-size: 25px;
+
+}
+
+nav ul li{
+    /* below makes the links side by side, inline block */
+    display: inline-block; 
+    list-style: none;
+    margin: 10px 20px;
+
+}
+
+nav ul li a{
+    
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background:  #18d1ff;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+.header-text{
+    margin-top:20%;
+    font-size: 30px;
+    text-shadow: 5px 5px 5px #000000;
+}
+
+.header-text h1{
+    font-size: 60 px;
+    margin-top: 20px;
+}
+
+
+.header-text h1 span{
+    color: #18d1ff;
+}
+
+/* ---- ABOUT -----*/
+
+#about{
+    padding: 80px 0;
+    color: #ababab;
+}
+.row{
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+
+}
+
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+    
+}
+
+.about-col-2{
+    flex-basis: 60%;
+    font-size: 16px;
+}
+
+
+
+.subs{
+    font-size: 60px;
+    font-weight:600;
+    color: #fff;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 30px 0 40px;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #18d1ff;
+    position: absolute;
+    left:0;
+    bottom:-6px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+    font-size: 15px;
+}
+
+.tab-contents ul li span{
+    color:#18d1ff;
+    font-size: 20px;
+}
+
+.tab-contents{
+    display: none;
+
+}
+
+.tab-contents.active-tab{
+    display: block;
+
+}
+
+.sub-title{
+    font-size: 60px;
+    font-weight: 75px;
+}
+
+
+/*---PORTFOLIO----*/
+#portfolio{
+    padding: 50px 0;
+}
+
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 40px;
+}   
+
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}   
+
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}   
+
+.layer{
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(0,0,0,0.2),#18d1ff);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    /*Above sets up the gradient*/
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align:center;
+    font-size: 14px;
+    transition: height 0.5s;
+   /*Above centers the text*/
+
+}
+
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.layer a{
+    margin-top: 20px;
+    color: #18d1ff;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    /*border radius below makes icon a circle*/
+    border-radius: 50%;
+    text-align:center;
+}
+
+.work:hover img{
+    transform: scale(1.1);
+    /* height: 100%; */
+}
+
+.work:hover .layer{
+    height: 100%;
+}
+
+
 
 .intro {
     position: relative;
@@ -60,6 +299,67 @@ body {
     font-size: 5rem;
     font-weight: 800;
     color: #ff6f00;
+}
+
+/*Research Section*/
+
+#research{
+    padding: 80px 0;
+    color: #ababab;
+}
+.row{
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+}
+
+.research-col1{
+    flex-basis: 35%;
+
+}
+
+.research-col1 img{
+    width: 100%;
+    border-radius: 15px;
+    
+}
+
+.research-col2{
+    flex-basis: 60%;
+    font-size: 1.5rem;
+}
+
+.btn{
+    display: inline-block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #18d1ff;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    transition: background 0.5s;
+}
+
+.btn:hover{
+    background:#18d1ff;
+}
+
+
+/*CSS for small screens*/
+@media only screen and (max-width: 600px){
+    #header{
+        background-image: linear-gradient(rgba(0,0,0,0.1),#000000), url(images/AI_Background.jpg)
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+
+    .header-text h1{
+      
+        font-size: 30px;
+    }
 }
 
 /* .home .image img{
